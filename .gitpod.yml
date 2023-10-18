@@ -2,4 +2,4 @@ tasks:
   - init: npm install
     command: |
       node index.js
-      echo "Check the Hedera TPS again by typing `node index.js` in this terminal"
+      echo "Check the Hedera TPS again with the command 'node index.js'"
