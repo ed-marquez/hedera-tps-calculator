@@ -8,6 +8,8 @@ Every block on Hedera takes approximately 2 seconds. In our script, we're focusi
 Data for the last 5 blocks is retrieved using Hedera's mirror node REST API:
 
 ```js
+const axios = require("axios");
+
 async function getTransactionsPerSecond() {
 
     const numBlocks = 5;
