@@ -1,0 +1,23 @@
+{
+  "name": "hedera-tps-calculator",
+  "version": "1.0.0",
+  "description": "This Python script (also provided in JavaScript) calculates the Transactions Per Second (TPS) for Hedera by analyzing data from the last few blocks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ed-marquez/hedera-tps-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ed-marquez/hedera-tps-calculator/issues"
+  },
+  "homepage": "https://github.com/ed-marquez/hedera-tps-calculator#readme",
+  "dependencies": {
+    "axios": "^1.5.1"
+  }
+}
