@@ -1,6 +1,6 @@
 # Hedera Transactions Per Second (TPS) Calculation
 
-This JavaScript script (also provided in Python) calculates the Transactions Per Second (TPS) for Hedera by analyzing data from the last few blocks.
+This JavaScript script (also provided in Python - [see repo](https://github.com/ed-marquez/hedera-tps-calculator-python/tree/main)) calculates the Transactions Per Second (TPS) for Hedera by analyzing data from the last few blocks.
 
 ## 1. Fetch Block Data
 
