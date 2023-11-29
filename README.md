@@ -1,4 +1,5 @@
 # Try It with GitPod
+
 💻 [Quickly run this example in your browser](https://gitpod.io/#https://github.com/ed-marquez/hedera-tps-calculator-js)
 
 # Hedera Transactions Per Second (TPS) Calculation
@@ -7,7 +8,7 @@ This JavaScript script (also provided in Python - [see repo](https://github.com/
 
 ## 1. Fetch Block Data
 
-Every block on Hedera takes approximately 2 seconds. In our script, we're focusing on the last 5 blocks:
+Every block on Hedera takes approximately 2 seconds. In the script, we're focusing on the last 5 blocks:
 Data for the last 5 blocks is retrieved using Hedera's mirror node REST API:
 
 ```js
@@ -25,8 +26,8 @@ async function getTransactionsPerSecond() {
 For these 5 blocks, the total number of transactions is calculated by summing up the transaction counts of each block:
 
 ```js
-    const blocks = response.data["blocks"];
-    const sumOfTransactions = blocks.reduce((acc, block) => acc + block["count"], 0);
+const blocks = response.data["blocks"];
+const sumOfTransactions = blocks.reduce((acc, block) => acc + block["count"], 0);
 ```
 
 ## 3. Calculate Duration
@@ -34,9 +35,9 @@ For these 5 blocks, the total number of transactions is calculated by summing up
 We determine the total duration of these 5 blocks by calculating the difference between the timestamps of the newest and the oldest block:
 
 ```js
-    const newestBlockToTimestamp = parseFloat(blocks[0]["timestamp"]["to"]);
-    const oldestBlockFromTimestamp = parseFloat(blocks[blocks.length - 1]["timestamp"]["from"]);
-    const duration = newestBlockToTimestamp - oldestBlockFromTimestamp;
+const newestBlockToTimestamp = parseFloat(blocks[0]["timestamp"]["to"]);
+const oldestBlockFromTimestamp = parseFloat(blocks[blocks.length - 1]["timestamp"]["from"]);
+const duration = newestBlockToTimestamp - oldestBlockFromTimestamp;
 ```
 
 ## 4. Calculate TPS 🎉🎉
